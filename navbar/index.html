@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tailwind css</title>
+    <link href="./output.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="relative">
+      <nav
+        class="w-full h-auto flex items-center justify-between py-5 mt-6 md:px-12 lg:px-16"
+      >
+        <div class="logo">
+          <img src="img/logo.svg" alt="logo" class="w-52 md:w-40" />
+        </div>
+        <div>
+          <ul class="gap-8 font-semibold text-xl hidden lg:flex">
+            <li class="hover:text-[#8224e3] duration-150 cursor-pointer">
+              Demos
+            </li>
+            <li class="hover:text-[#8224e3] duration-150 cursor-pointer">
+              Features
+            </li>
+            <li class="hover:text-[#8224e3] duration-150 cursor-pointer">
+              Documentation
+            </li>
+            <li class="hover:text-[#8224e3] duration-150 cursor-pointer">
+              Contact
+            </li>
+          </ul>
+        </div>
+        <div class="flex items-center gap-3">
+          <button
+            class="bg-[#8224e3] px-8 py-3 border rounded-full text-white font-bold text-xl text-nowrap"
+          >
+            Buy Now
+          </button>
+          <button
+            class="w-10 h-auto flex flex-col gap-1.5 lg:hidden"
+            id="mobile-menu-show"
+          >
+            <span
+              class="w-full border-none bg-[#8224e3] h-1 border rounded-lg block"
+            ></span>
+            <span
+              class="w-3/4 border-none bg-[#8224e3] h-1 border rounded-lg block"
+            ></span>
+            <span
+              class="w-2/4 border-none bg-[#8224e3] h-1 border rounded-lg block"
+            ></span>
+          </button>
+        </div>
+      </nav>
+
+      <div
+        class="absolute w-full h-screen top-[-27px] right-0 bg-gray-200 z-50 hidden"
+        id="mobile-menu"
+      >
+        <div>
+          <ul class="gap-8 font-semibold text-xl flex flex-col p-6">
+            <li class="hover:text-[#8224e3] duration-150 cursor-pointer">
+              Demos
+            </li>
+            <li class="hover:text-[#8224e3] duration-150 cursor-pointer">
+              Features
+            </li>
+            <li class="hover:text-[#8224e3] duration-150 cursor-pointer">
+              Documentation
+            </li>
+            <li class="hover:text-[#8224e3] duration-150 cursor-pointer">
+              Contact
+            </li>
+          </ul>
+          <span
+            class="absolute right-9 top-9 cursor-pointer text-2xl select-none bg-[#8224e3] px-8 py-3 border rounded-full text-white font-bold text-nowrap"
+            id="mobile-menu-close"
+            >close</span
+          >
+        </div>
+      </div>
+    </div>
+    <script src="nav.js"></script>
+  </body>
+</html>
